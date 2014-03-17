@@ -37,9 +37,11 @@
 <script>
 var i = 0;
 
-setInterval(function startCalc() {
+function startCalc() {
+    setInterval(function() {
     document.getElementById('cost').value = ++i;
-}, 1000);
+    }, 1000);
+}
 </script>
 
 </html>
