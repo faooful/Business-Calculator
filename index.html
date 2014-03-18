@@ -26,6 +26,7 @@
 <div id="main-wrapper">
 
 <button onclick="startCalc()">Start</button>
+<input type="button" value="pause" onclick="stopCalc()">
 <input type="text" id="cost" value="0"></input>
 
 </div>
@@ -33,15 +34,18 @@
 </body>
 
 <script src="js/jquery-1.9.1.min.js" charset="utf-8"></script>
-
 <script>
-var i = 0;
+var costVal = 0;
 
 function startCalc() {
     setInterval(function() {
-    document.getElementById('cost').value = ++i;
+    document.getElementById('cost').value = ++costVal;
     }, 1000);
+function stopCalc() {
+    clearInterval(costVal);
 }
+}
+
 </script>
 
 </html>
